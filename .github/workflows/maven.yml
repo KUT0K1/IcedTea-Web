@@ -25,10 +25,10 @@ jobs:
     - name: Build with Maven
       uses: GabrielBB/xvfb-action@v1
       with:
-        run: mvn clean install
+        run: mvn clean verify
 
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: icedtea-web-artifacts
-        path: '**/launchers/**'
+        path: '**/*'
