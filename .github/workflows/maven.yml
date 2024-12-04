@@ -31,7 +31,5 @@ jobs:
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v3
       with:
-          name: icedtea-web_build_x86-64_win
-          path: |
-            icedtea-web-*.win.bin.*
-            win-installer.build/icedtea-web-*.msi*
+        name: icedtea-web-artifacts
+        path: '**/target/**/*'
